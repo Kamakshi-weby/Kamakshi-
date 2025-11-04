@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kamakshi Singh - Web Developer Portfolio</title>
+    <title>Welcome - Web Developer Portfolio</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     
@@ -275,9 +275,10 @@
 
     <header class="hero">
         <div class="hero-content">
-            <h1>Kamakshi Singh</h1>
-            <h2>Web Developer | Design Enthusiast</h2>
-            <p>Crafting clean, professional digital experiences with HTML, CSS, and Python.</p>
+            <h1>Welcome</h1>
+            <p>I am passionate about transforming ideas into visually stunning and functional websites. My journey in web development is driven by a love for **clean code** and **elegant design principles**, constantly learning and applying new techniques to solve digital challenges. I love coding and have been actively learning web development, aiming for seamless user experiences.</p>
+            <h2>Skills: Web Developer | Design Enthusiast</h2>
+            <p>HTML, CSS, JavaScript, Python, Java, Adobe & Canva, Blender (3D)</p>
         </div>
     </header>
 
@@ -329,16 +330,16 @@
             <div class="contact-info-block">
                 <h4>✨ Contact Info</h4>
                 <p>
-                    <i class="fas fa-envelope"></i> 📧 **Email:** kamakshisinghranchi1@gmail.com
+                    <i class="fas fa-envelope"></i> 📧 **Email:** <a href="mailto:kamakshisinghranchi1@gmail.com">kamakshisinghranchi1@gmail.com</a>
                 </p>
                 <p>
-                    <i class="fab fa-instagram"></i> 📸 **Instagram:** @kamakshiii_singh
+                    <i class="fab fa-instagram"></i> 📸 **Instagram:** <a href="https://instagram.com/kamakshiii_singh" target="_blank" rel="noopener noreferrer">@kamakshiii_singh</a>
                 </p>
                 <p>
-                    <i class="fab fa-snapchat-ghost"></i> 👻 **Snapchat:** @kaaaaaaashu
+                    <i class="fab fa-snapchat-ghost"></i> 👻 **Snapchat:** <a href="https://snapchat.com/add/kaaaaaaashu" target="_blank" rel="noopener noreferrer">@kaaaaaaashu</a>
                 </p>
                 <p>
-                    <i class="fab fa-linkedin"></i> 💼 **LinkedIn:** linkedin.com/in/kamakshi-singh-40685a395
+                    <i class="fab fa-linkedin"></i> 💼 **LinkedIn:** <a href="https://linkedin.com/in/kamakshi-singh-40685a395" target="_blank" rel="noopener noreferrer">linkedin.com/in/kamakshi-singh-40685a395</a>
                 </p>
             </div>
         </div>
@@ -346,11 +347,11 @@
 
     <footer>
         <div class="socials">
-            <a href="https://linkedin.com/in/kamakshi-singh-40685a395" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
-            <a href="https://instagram.com/kamakshiii_singh" target="_blank" aria-label="Instagram"><i class="fab fa-instagram fa-2x"></i></a>
-            <a href="https://snapchat.com/add/kaaaaaaashu" target="_blank" aria-label="Snapchat"><i class="fab fa-snapchat-ghost fa-2x"></i></a>
+            <a href="https://linkedin.com/in/kamakshi-singh-40685a395" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
+            <a href="https://instagram.com/kamakshiii_singh" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram fa-2x"></i></a>
+            <a href="https://snapchat.com/add/kaaaaaaashu" target="_blank" rel="noopener noreferrer" aria-label="Snapchat"><i class="fab fa-snapchat-ghost fa-2x"></i></a>
         </div>
-        <p>&copy; 2025 Kamakshi Singh. All rights reserved.</p>
+        <p>&copy; 2025 Portfolio. All rights reserved.</p>
     </footer>
 
     <script>
