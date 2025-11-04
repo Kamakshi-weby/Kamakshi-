@@ -217,6 +217,18 @@
         .contact-info-block {
             margin-top: 30px;
             line-height: 2.0;
+            text-align: left;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .contact-info-block h4 {
+            text-align: center;
+        }
+        
+        .contact-info-block p {
+            font-size: 1.1rem;
         }
 
 
@@ -318,6 +330,15 @@
                 <h4>✨ Contact Info</h4>
                 <p>
                     <i class="fas fa-envelope"></i> 📧 **Email:** kamakshisinghranchi1@gmail.com
+                </p>
+                <p>
+                    <i class="fab fa-instagram"></i> 📸 **Instagram:** @kamakshiii_singh
+                </p>
+                <p>
+                    <i class="fab fa-snapchat-ghost"></i> 👻 **Snapchat:** @kaaaaaaashu
+                </p>
+                <p>
+                    <i class="fab fa-linkedin"></i> 💼 **LinkedIn:** linkedin.com/in/kamakshi-singh-40685a395
                 </p>
             </div>
         </div>
