@@ -276,7 +276,7 @@
     <header class="hero">
         <div class="hero-content">
             <h1>Welcome</h1>
-            <p>I am passionate about transforming ideas into visually stunning and functional websites. My journey in web development is driven by a love for **clean code** and **elegant design principles**, constantly learning and applying new techniques to solve digital challenges. I love coding and have been actively learning web development, aiming for seamless user experiences.</p>
+            <p>I am passionate about transforming ideas into visually stunning and functional websites. My journey in web development is driven by a love,constantly learning and applying new techniques to solve digital challenges. I love coding and have been actively learning web development, aiming for seamless user experiences.</p>
             <h2>Skills: Web Developer | Design Enthusiast</h2>
             <p>HTML, CSS, JavaScript, Python, Java, Adobe & Canva, Blender (3D)</p>
         </div>
