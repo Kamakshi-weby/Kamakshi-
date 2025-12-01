@@ -1,402 +1,237 @@
 
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome - Web Developer Portfolio</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    
-    <script src="https://kit.fontawesome.com/9780135d1f.js" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kamakshi Edits</title>
 
-    <style>
-        /* --- 1. GENERAL & TYPOGRAPHY --- */
-        :root {
-            --color-primary: #333d47;      /* Deep Charcoal / Dark Blue */
-            --color-secondary: #f4f2f0;    /* Soft Cream/Off-White */
-            --color-accent: #a4918e;       /* Muted Terracotta/Dusty Rose */
-            --color-text: #555;
-            --font-heading: 'Lora', serif;
-            --font-body: 'Montserrat', sans-serif;
-        }
+<style>
+    body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background: #f7eefe;
+        color: #333;
+    }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+    header {
+        text-align: center;
+        padding: 40px 20px;
+        background: #e9d4ff;
+        border-bottom: 3px solid #c9a7ff;
+    }
 
-        body {
-            font-family: var(--font-body);
-            line-height: 1.6;
-            color: var(--color-text);
-            background-color: var(--color-secondary);
-            scroll-behavior: smooth;
-        }
+    h1 {
+        font-size: 2.6rem;
+        margin: 0;
+        font-weight: 800;
+    }
 
-        h1, h2, h3 {
-            font-family: var(--font-heading);
-            color: var(--color-primary);
-            font-weight: 500;
-        }
+    .subtitle {
+        font-size: 1.2rem;
+        opacity: 0.8;
+        margin-top: 8px;
+    }
 
-        h1 { font-size: 3.5rem; }
-        h2 { font-size: 1.8rem; }
-        h3 { font-size: 1.6rem; margin-bottom: 1.5rem; }
+    .container {
+        max-width: 850px;
+        margin: 40px auto;
+        padding: 30px;
+    }
 
-        a {
-            color: var(--color-accent);
-            text-decoration: none;
-        }
-        a:hover {
-            color: var(--color-primary);
-        }
+    .section-title {
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
 
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 0 20px;
-        }
+    /* CARD STYLE */
+    .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 20px;
+        margin-bottom: 40px;
+    }
 
-        .section {
-            padding: 80px 0;
-        }
-        
-        /* --- 2. NAVIGATION (Simple fixed nav bar) --- */
-        .navbar {
-            background-color: var(--color-primary);
-            color: var(--color-secondary);
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        .navbar .container {
-            display: flex;
-            justify-content: flex-end; /* Align links to the right */
-        }
-        
-        .navbar a {
-            color: var(--color-secondary);
-            padding: 0 15px;
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            transition: color 0.3s;
-        }
-        
-        .navbar a:hover {
-            color: var(--color-accent);
-        }
+    .card {
+        background: white;
+        border-radius: 18px;
+        padding: 20px;
+        text-align: center;
+        border: 2px dashed #d3baff;
+        cursor: pointer;
+        transition: 0.25s;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        position: relative;
+    }
 
+    .card:hover {
+        transform: translateY(-5px);
+        border-color: #b28aff;
+    }
 
-        /* --- 3. HERO SECTION STYLING --- */
-        .hero {
-            background-color: var(--color-primary);
-            color: var(--color-secondary);
-            min-height: 50vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 100px 20px;
-        }
+    .card img {
+        width: 60px;
+        margin-bottom: 10px;
+        opacity: 0.85;
+    }
 
-        .hero h1 {
-            color: var(--color-secondary);
-            margin-bottom: 0.5rem;
-        }
+    .card.selected {
+        background: #ecdfff;
+        border-color: #9d70ff;
+        box-shadow: 0 0 15px rgba(157,112,255,0.5);
+    }
 
-        .hero h2 {
-            color: var(--color-accent);
-            font-weight: 300;
-            margin-bottom: 1rem;
-        }
+    textarea, input {
+        width: 100%;
+        padding: 14px;
+        font-size: 1rem;
+        border: 2px solid #d3baff;
+        border-radius: 12px;
+        background: #fff;
+        margin-bottom: 20px;
+    }
 
-        /* --- 4. ABOUT ME & SKILLS --- */
-        .about-me {
-            background-color: #fff;
-            text-align: center;
-        }
-        
-        .about-me p {
-            max-width: 800px;
-            margin: 0 auto 30px;
-        }
+    button {
+        background: #b28aff;
+        color: white;
+        padding: 14px 26px;
+        border-radius: 12px;
+        border: none;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: 0.2s;
+        font-weight: 600;
+    }
 
-        .skills-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 30px;
-        }
-
-        .skill-item {
-            background-color: var(--color-secondary);
-            color: var(--color-primary);
-            padding: 10px 20px;
-            border-radius: 5px;
-            border: 1px solid var(--color-accent);
-            font-weight: 600;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        .skill-item:hover {
-            background-color: var(--color-accent);
-            color: #fff;
-        }
-        
-        /* --- 5. PORTFOLIO (Placeholder Styling) --- */
-        .portfolio {
-             background-color: var(--color-secondary);
-             text-align: center;
-        }
-
-
-        /* --- 6. CONTACT & FORM STYLING --- */
-        .contact {
-            background-color: #fff;
-            text-align: center;
-        }
-
-        #contact-form {
-            max-width: 600px;
-            margin: 0 auto 30px;
-            text-align: left;
-            padding: 25px;
-            border: 1px solid #ddd;
-            background-color: var(--color-secondary);
-            border-radius: 8px;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: 600;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-family: var(--font-body);
-            font-size: 1rem;
-        }
-
-        .btn-submit {
-            background-color: var(--color-accent);
-            color: #fff;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 1rem;
-            font-weight: 600;
-            transition: background-color 0.3s;
-        }
-
-        .btn-submit:hover {
-            background-color: var(--color-primary);
-        }
-
-        .form-status {
-            margin-top: 15px;
-            font-weight: 600;
-        }
-        
-        .contact-info-block {
-            margin-top: 30px;
-            line-height: 2.0;
-            text-align: left;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .contact-info-block h4 {
-            text-align: center;
-        }
-        
-        .contact-info-block p {
-            font-size: 1.1rem;
-        }
-
-
-        /* --- 7. FOOTER & SOCIALS --- */
-        footer {
-            background-color: var(--color-primary);
-            color: var(--color-secondary);
-            text-align: center;
-            padding: 30px 20px;
-            border-top: 5px solid var(--color-accent);
-        }
-
-        .socials {
-            margin-bottom: 15px;
-        }
-
-        .socials a {
-            color: var(--color-secondary);
-            margin: 0 15px;
-            transition: color 0.3s;
-        }
-
-        .socials a:hover {
-            color: var(--color-accent);
-        }
-        
-        /* --- 8. RESPONSIVE DESIGN --- */
-        @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; }
-            h2 { font-size: 1.5rem; }
-            .section { padding: 60px 0; }
-        }
-    </style>
+    button:hover {
+        background: #9c6aff;
+    }
+</style>
 </head>
+
 <body>
 
-    <nav class="navbar">
-        <div class="container">
-            <a href="#about">About</a>
-            <a href="#portfolio">Projects</a>
-            <a href="#contact">Contact</a>
+<header>
+    <h1>Kamakshi Edits</h1>
+    <p class="subtitle">Aesthetic Editing • Ads • Photos • Videos • Websites</p>
+</header>
+
+<div class="container">
+
+    <!-- SECTION 1 -->
+    <div class="section-title">Who Are You?</div>
+    <div class="card-grid" id="userType">
+        <div class="card" data-value="Business Owner">
+            <img src="https://i.imgur.com/HYzI3J6.png">
+            Business Owner
         </div>
-    </nav>
-
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Welcome</h1>
-            <p>I am passionate about transforming ideas into visually stunning and functional websites. My journey in web development is driven by a love,constantly learning and applying new techniques to solve digital challenges. I love coding and have been actively learning web development, aiming for seamless user experiences.</p>
-            <h2>Skills: Web Developer | Design Enthusiast</h2>
-            <p>HTML, CSS, JavaScript, Python, Java, Adobe & Canva, Blender (3D)</p>
+        <div class="card" data-value="Creator">
+            <img src="https://i.imgur.com/4jz5PwM.png">
+            Creator
         </div>
-    </header>
-
-    <section id="about" class="section about-me">
-        <div class="container">
-            <h3>About Me & My Skills</h3>
-            <p>I am passionate about transforming ideas into visually stunning and functional websites. My journey in web development is driven by a love for **clean code** and **elegant design principles**, constantly learning and applying new techniques to solve digital challenges. I love coding and have been actively learning web development, aiming for seamless user experiences.</p>
-            
-            <div class="skills-grid">
-                <div class="skill-item">HTML</div>
-                <div class="skill-item">CSS</div>
-                <div class="skill-item">JavaScript</div>
-                <div class="skill-item">Python</div>
-                <div class="skill-item">Java</div>
-                <div class="skill-item">Adobe & Canva</div>
-                <div class="skill-item">Blender (3D)</div>
-            </div>
+        <div class="card" data-value="Brand">
+            <img src="https://i.imgur.com/wuLzF2n.png">
+            Brand
         </div>
-    </section>
-
-    <section id="portfolio" class="section portfolio">
-        <div class="container">
-            <h3>Featured Projects</h3>
-            <p>A showcase of my recent coding and design projects will be displayed here soon. This section will demonstrate my abilities in responsive design and backend functionality.</p>
+        <div class="card" data-value="Influencer">
+            <img src="https://i.imgur.com/F7tXO80.png">
+            Influencer
         </div>
-    </section>
+    </div>
 
-    <section id="contact" class="section contact">
-        <div class="container">
-            <h3>Get In Touch</h3>
-            
-            <form id="contact-form" action="YOUR_FORMSPREE_ENDPOINT" method="POST">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="_replyto" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn-submit">Send Message</button>
-                <p class="form-status" id="form-status"></p>
-            </form>
-            
-            <div class="contact-info-block">
-                <h4>✨ Contact Info</h4>
-                <p>
-                    <i class="fas fa-envelope"></i> 📧 **Email:** <a href="mailto:kamakshisinghranchi1@gmail.com">kamakshisinghranchi1@gmail.com</a>
-                </p>
-                <p>
-                    <i class="fab fa-instagram"></i> 📸 **Instagram:** <a href="https://instagram.com/kamakshiii_singh" target="_blank" rel="noopener noreferrer">@kamakshiii_singh</a>
-                </p>
-                <p>
-                    <i class="fab fa-snapchat-ghost"></i> 👻 **Snapchat:** <a href="https://snapchat.com/add/kaaaaaaashu" target="_blank" rel="noopener noreferrer">@kaaaaaaashu</a>
-                </p>
-                <p>
-                    <i class="fab fa-linkedin"></i> 💼 **LinkedIn:** <a href="https://linkedin.com/in/kamakshi-singh-40685a395" target="_blank" rel="noopener noreferrer">linkedin.com/in/kamakshi-singh-40685a395</a>
-                </p>
-            </div>
+    <!-- SECTION 2 -->
+    <div class="section-title">What Work Do You Want?</div>
+    <div class="card-grid" id="workType">
+        <div class="card" data-value="Photo Editing">
+            <img src="https://i.imgur.com/zmbYwSW.png">
+            Photo Editing
         </div>
-    </section>
-
-    <footer>
-        <div class="socials">
-            <a href="https://linkedin.com/in/kamakshi-singh-40685a395" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
-            <a href="https://instagram.com/kamakshiii_singh" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram fa-2x"></i></a>
-            <a href="https://snapchat.com/add/kaaaaaaashu" target="_blank" rel="noopener noreferrer" aria-label="Snapchat"><i class="fab fa-snapchat-ghost fa-2x"></i></a>
+        <div class="card" data-value="Video Editing">
+            <img src="https://i.imgur.com/HYzI3J6.png">
+            Video Editing
         </div>
-        <p>&copy; 2025 Portfolio. All rights reserved.</p>
-    </footer>
+        <div class="card" data-value="Ad Editing">
+            <img src="https://i.imgur.com/XyS8zmC.png">
+            Ad Editing
+        </div>
+        <div class="card" data-value="Website Creation">
+            <img src="https://i.imgur.com/NBfQx7P.png">
+            Website Creation
+        </div>
+        <div class="card" data-value="Brand Content">
+            <img src="https://i.imgur.com/8Vh2fDs.png">
+            Brand Content
+        </div>
+    </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const form = document.getElementById('contact-form');
-            const formStatus = document.getElementById('form-status');
+    <!-- DESCRIPTION -->
+    <div class="section-title">Describe What You Need</div>
+    <textarea id="details" rows="6" placeholder="Explain your exact requirements here..."></textarea>
 
-            if (form) {
-                form.addEventListener('submit', async (e) => {
-                    e.preventDefault(); 
-                    
-                    formStatus.textContent = 'Sending message...';
-                    formStatus.style.color = 'var(--color-primary)';
-                    
-                    const formData = new FormData(form);
-                    
-                    // The following logic will only work if you replace "YOUR_FORMSPREE_ENDPOINT"
-                    // with an actual endpoint from a form service.
-                    
-                    try {
-                        const response = await fetch(form.action, {
-                            method: 'POST',
-                            body: formData,
-                            headers: {
-                                'Accept': 'application/json'
-                            }
-                        });
+    <!-- SEPARATE SOCIAL MEDIA HANDLING SECTION -->
+    <div class="section-title">Do You Want Social Media Handling?</div>
 
-                        if (response.ok) {
-                            formStatus.textContent = 'Thank you! Your message has been sent successfully.';
-                            formStatus.style.color = 'green';
-                            form.reset(); 
-                        } else {
-                            // Handle service-specific errors
-                            formStatus.textContent = 'Oops! There was an issue sending your message. Check the endpoint URL.';
-                            formStatus.style.color = 'red';
-                        }
-                    } catch (error) {
-                        // Handle network or fetch errors
-                        formStatus.textContent = 'Error: Could not connect to the form service.';
-                        formStatus.style.color = 'red';
-                    }
-                });
-            }
+    <div class="card-grid" id="socials">
+        <div class="card" data-value="Yes">
+            <img src="https://i.imgur.com/42nZ2tb.png">
+            Yes
+        </div>
+        <div class="card" data-value="No">
+            <img src="https://i.imgur.com/0mpbO9v.png">
+            No
+        </div>
+        <div class="card" data-value="Maybe">
+            <img src="https://i.imgur.com/QgmIFq2.png">
+            Maybe
+        </div>
+    </div>
+
+    <input type="text" id="budget" placeholder="If Yes, what's your budget? (optional)">
+
+    <!-- SEND BUTTON -->
+    <button onclick="sendMail()">Send Request</button>
+
+</div>
+
+<script>
+function enableSelection(sectionId) {
+    const cards = document.querySelectorAll(`#${sectionId} .card`);
+    cards.forEach(card => {
+        card.addEventListener("click", () => {
+            cards.forEach(c => c.classList.remove("selected"));
+            card.classList.add("selected");
         });
-    </script>
+    });
+}
+
+enableSelection("userType");
+enableSelection("workType");
+enableSelection("socials");
+
+function sendMail() {
+    let user = document.querySelector("#userType .selected");
+    let work = document.querySelector("#workType .selected");
+    let social = document.querySelector("#socials .selected");
+    let details = document.getElementById("details").value;
+    let budget = document.getElementById("budget").value;
+
+    if (!user || !work || details.trim() === "") {
+        alert("Please fill out all required fields.");
+        return;
+    }
+
+    let body =
+        "Who Are They: " + user.dataset.value + "%0D%0A" +
+        "Work Needed: " + work.dataset.value + "%0D%0A" +
+        "Details: " + details + "%0D%0A" +
+        "Social Media Handling: " + (social ? social.dataset.value : "Not selected") + "%0D%0A" +
+        "Budget: " + budget;
+
+    window.location.href = "mailto:kamakshisinghranchi1@gmail.com"
+        + "?subject=New Client Request"
+        + "&body=" + body;
+}
+</script>
+
 </body>
 </html>
